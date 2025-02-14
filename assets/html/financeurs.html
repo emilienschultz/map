@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    margin-left: 10%;
+    margin-right: 10%;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  margin-left: 10%;
+margin-right: 10%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 20%;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">Carte</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Méthodologie</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">A propos</button>
+
+
+<div id="Home" class="tabcontent">
+   <p>Cette carte interactive montre comment les perceptions du risque inondation et les comportement d’évacuation changent d’un territoire à un autre à Paris et en Ile de France à trois échelles différentes (communes, infra-communal, carreaux de 200 mètres).</p>
+</div>
+
+<div id="News" class="tabcontent">
+  
+  <p>Ces cartes sont issues d’une enquête de 2018 sur un échantillon représentatif de la population francilienne stratifié à trois échelles (département, commune, zone inondable; méthode des quotas, 2976 personnes). <br>
+    Les découpages territoriaux sont ceux de l’INSEE de 2018 : <a href="https://www.insee.fr/fr/information/2028028"> <strong> communes,</a> </strong>[https://www.insee.fr/fr/information/2028028]  <br> 
+    <strong> IRIS </strong> [https://www.insee.fr/fr/metadonnees/definition/c1523] <br>
+    <strong> carreau de 200m </strong> [https://www.insee.fr/fr/statistiques/6215138]. <br><br>
+    
+    Les estimations sont dérivées d'un modèle statistique utilisant la régression multiniveaux avec post-stratification (MRP) ainsi que les caractéristiques démographiques et géographiques de chaque territoire.<br> <br> 
+
+
+    Pour plus de détails sur l’enquête ou les méthodes, veuillez consulter l'article scientifique : Rufat, S., Howe, P. (2022). Small-area estimations from survey data for high-resolution maps of urban flood risk perception and evacuation behavior. Annals of the American Association of Geographers, XXX(XXX), <br>
+    DOI: XXX [lien quand disponible] <br><br></p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+<div> exemple de texte sous menu </div>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

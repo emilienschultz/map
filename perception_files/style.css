@@ -1,0 +1,291 @@
+.tablink {
+    background-color: #f3f3f2;
+    color: black;
+    font-weight: bold;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    
+    
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+   
+      }
+  
+  #Home {background-color:#f3f3f2 ;}
+  #News {background-color: #f3f3f2;}
+  #Contact {background-color: #f3f3f2;}
+  #About {background-color: #f3f3f2;}
+
+.ulnav {
+    list-style-type: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f2;
+}
+
+.linav {
+    float: left;
+    
+}
+
+.linav a {
+    display: block;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(139, 138, 138);
+}
+
+.active {
+    background-color:rgb(139, 138, 138);
+}
+
+
+.navdroite{
+    text-align: right;
+}
+.header {
+    background-color: #f3f3f2 ;
+}
+
+
+.t1 {
+
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-right: 20%;
+}
+.p1 {
+    margin-left: 10%;
+}
+.p2{
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    font-size: 45px;
+    text-align : center;
+    
+ 
+}
+
+.p3{
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-right: 15%;
+    font-size: 20px;
+  }
+
+.body {
+
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-right: 10%;
+  
+}
+
+.sidebar {
+
+    margin-left: 15%;
+    margin-top: 10px;
+    
+
+}
+
+.dataviz{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-left:10%; 
+    margin-left: 20px ; 
+    display : none;}
+
+.bouton {
+    background-color: #e7e7e7; color: black;
+    border : none ; 
+    color : black ;
+    border-radius : 8px;
+    padding: 10px 24px;
+    vertical-align: center ;
+    width : 80% ;
+    height : 60px;
+    
+} 
+.bouton:hover {
+    background-color: rgb(139, 138, 138);
+    text-align: center;
+    
+}
+.tbdroite {
+    text-align: right;
+}
+
+.formCouche {
+    display: none ;
+}
+
+
+.tooltip {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  min-width: 400px;
+  text-align: left;
+  color: white;
+}
+
+
+.grille_map {
+    display: grid;
+    margin-left : 10%;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 250px ;
+    width:80%; 
+    min-height: 20px;
+    grid-gap: 1rem ;
+    
+       
+    }
+
+.map {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 18;
+}
+
+.muni {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+}
+
+.iris {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+
+}
+
+.grid {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+
+}
+.legend {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 12;
+    grid-row-end: 12;
+    font-style: italic;
+    font-size: small;
+
+}
+
+.grille_data { 
+    display: grid;
+    margin-left : 10%;
+    margin-top : 2.5%;
+    grid-template-columns: 32.5 32.5 32.5;
+    grid-template-rows: 400px ;
+    width:80%; 
+    grid-gap: 1rem ;
+    background-color: black;
+   
+}
+
+.data {
+    display: none;
+    margin-left: 20%;
+    margin-top : 2.5%;
+
+}
+    
+    
+.footer {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    height: 120px;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    
+}
+
+.overlay-container-commune{
+    background-color : #FFFFFF;
+    width: 150px;
+    text-align: center;
+    border-radius: 1px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -80px;
+    font-style: bold;
+    font-size: 12px;
+  
+  }
+  .overlay-container{
+    background-color : #FFFFFF;
+    width: 150px;
+    text-align: center;
+    border-radius: 1px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -80px;
+  
+  }
+
+  .overlay-container-carroyage {
+    background-color : #FFFFFF;
+    width: 150px;
+    text-align: center;
+    border-radius: 1px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -80px;
+
+  }
+  

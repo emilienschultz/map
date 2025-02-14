@@ -1,0 +1,336 @@
+<!-- saved from url=(0040)https://perception.labo.cyu.fr/home.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>perception</title>
+
+    <!-- Bootstrap JS & CSS -->
+    <link
+      href="./perception_files/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="./perception_files/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./perception_files/bootstrap.bundle(1).min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Openlayers JS & CSS -->
+    <script src="./perception_files/ol.js"></script>
+    <link rel="stylesheet" href="./perception_files/ol.css" />
+    <script
+      src="./perception_files/jquery-3.6.0.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- Mise en forme CSS -->
+    <link rel="stylesheet" href="./perception_files/style.css" />
+    <!-- Script JS -->
+    <script src="./perception_files/style.js" defer=""></script>
+    <script src="./perception_files/main.js" defer=""></script>
+  </head>
+  <body>
+    <header class="header">
+      <ul class="ulnav">
+        <li style="float: right" class="linav">
+          <a class="active" href="https://perception.labo.cyu.fr/index.html"
+            >FR</a
+          >
+        </li>
+      </ul>
+      <p class="p2">
+        <strong>
+          Flood risk perception and evacuation maps <br />
+          in Paris, France metropolitan area
+        </strong>
+      </p>
+
+      <!-- Div NavBar et Présentation -->
+      <div>
+        <button
+          style="margin-left: 10%"
+          class="tablink"
+          onclick="openPage(&#39;Maps&#39;, this)"
+          id="defaultOpen"
+        >
+          Maps
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage(&#39;Methodology&#39;, this)"
+          id="defaultOpen"
+        >
+          Methodology
+        </button>
+        <button class="tablink" onclick="openPage(&#39;Questions&#39;, this)">
+          Questions
+        </button>
+        <button class="tablink" onclick="openPage(&#39;About&#39;, this)">
+          About
+        </button>
+        <br />
+      </div>
+
+      <div id="Maps" class="tabcontent" style="display: block">
+        <p>
+          These maps show flood risk perceptions and evacuation behavior vary
+          across the Paris metropolitan area in France at county, municipal,
+          tract and 200 meter grid levels.
+        </p>
+      </div>
+
+      <div id="Methodology" class="tabcontent" style="display: none">
+        <p>
+          The maps are based on estimates derived from a dedicated 2018 large
+          survey (n = 2,976) following a quota sampling with three stratified
+          spatial categories (county, municipality, exposure) and three social
+          categories (age, gender, education) across all flood exposure levels
+          (none, indirect, direct). Geographical data is based on the INSEE 2018
+          delineations,
+          <a href="https://www.insee.fr/fr/information/2028028">
+            <strong> municipalities,</strong></a
+          ><strong> </strong>
+          <a href="https://www.insee.fr/fr/metadonnees/definition/c1523">
+            <strong> tracts,</strong></a
+          ><strong> </strong>
+          <a href="https://www.insee.fr/fr/statistiques/6215138">
+            <strong> 200m grid</strong></a
+          ><strong> </strong>. The estimates are derived from a statistical
+          model using multilevel regression with post-stratification (MRP) along
+          with demographic and geographic population characteristics. <br />
+          <br />
+        </p>
+      </div>
+
+      <div id="Questions" class="tabcontent" style="display: none">
+        <p><strong> Questions asked </strong> <br /></p>
+        <li>Is it possible to rely on flood forecasts ? <br /></li>
+        <li>In your neighborhood, are floods difficult to predict ? <br /></li>
+        <li>Do you worry about flooding ? <br /></li>
+        <li>Is your home in a flood risk zone ? <br /></li>
+        <li>
+          Is your home more exposed to flooding than the rest of the Paris
+          metropolitan region ? <br />
+        </li>
+        <li>
+          In your neighborhood, are floods difficult to prevent and control ?
+          <br />
+        </li>
+        <li>
+          In the event of a flood, would you assess your household as well
+          prepared ? <br />
+        </li>
+        <li>
+          If you received an official evacuation instruction, but you couldn’t
+          see any floodwater, would you leave ? <br />
+        </li>
+        <li>
+          In the event of a flood, would you go outside to get your car ? <br />
+        </li>
+        <li>
+          Consider the event of a flood where the water is not visible yet and
+          you experience no effects. However, if 1 in 3 families on your street
+          had already left (33%) would you spontaneously evacuate without being
+          instructed to do so ? <br />
+        </li>
+        <li>
+          Respondents refusing to evacuate is not a direct question, but an
+          indicator of responses where no evacuation question was answered with
+          a “yes” under any scenario or circumstance. <br />
+          <p></p>
+        </li>
+      </div>
+
+      <div id="About" class="tabcontent" style="display: none">
+        <p>
+          This project was funded by the
+          <a href="https://anr.fr/Projet-ANR-20-CE03-0009">
+            French National Agency for Research
+          </a>
+          (ANR), the<a
+            href="https://www.iufrance.fr/les-membres-de-liuf/membre/1670-samuel-rufat.html"
+          >
+            Institut Universitaire de France </a
+          >, the
+          <a href="https://forumviesmobiles.org/">Mobile Lives Forum </a> and
+          <a href="https://www.cyu.fr/"> CY Cery Paris University </a>
+        </p>
+      </div>
+    </header>
+    <!-- Div Sidebar -->
+    <div class="sidebar">
+      <!-- Liste déourlante Commune -->
+      <form action="#" class="formCouche" id="formCoucheCommune">
+        <label for="liste"> Select variable : </label>
+        <select name="listeCommune" id="listeCommune">
+          <option value="basedep" style="font-weight: bold">
+            -- Municipalities --
+          </option>
+          <option value="commune_fld_wrr">flood exposure awareness</option>
+          <option value="commune_trst_fr">trust in flood forecasts</option>
+          <option value="commune_fld_wrn">worry about flooding</option>
+          <option value="commune_wll_prp">well prepared for flood</option>
+          <option value="commune_prdct_d">floods difficult to predict</option>
+          <option value="commune_cntrl_d">floods difficult to prevent</option>
+          <option value="commune_mr_xpsd">more exposed to flooding</option>
+          <option value="commune_evctn_b">evacuation abide</option>
+          <option value="commune_fld_gt">go outside to get car</option>
+          <option value="commune_evc_spn">evacuation spontaneous</option>
+          <option value="commune_evctn_r">evacuation refuse</option>
+        </select>
+      </form>
+
+      <!-- Liste déourlante Iris -->
+      <form action="#" class="formCouche" id="formCoucheIris">
+        <label for="liste"> Select variable : </label>
+        <select name="listeIris" id="listeIris">
+          <option value="basedep" style="font-weight: bold">-- Iris --</option>
+          <option value="iris_fld_wrr">flood exposure awarenes</option>
+          <option value="iris_trst_fr">trust in flood forecasts</option>
+          <option value="iris_fld_wrn">worry about flooding</option>
+          <option value="iris_wll_prp">well prepared for flood</option>
+          <option value="iris_prdct_d">floods difficult to predict</option>
+          <option value="iris_cntrl_d">floods difficult to prevent</option>
+          <option value="iris_mr_xpsd">more exposed to flooding</option>
+          <option value="iris_evctn_b">evacuation abide</option>
+          <option value="iris_fld_gt">go outside to get car</option>
+          <option value="iris_evc_spn">evacuation spontaneous</option>
+          <option value="iris_evctn_r">evacuation refuse</option>
+        </select>
+      </form>
+
+      <!-- Liste déourlante Carroyage -->
+      <form action="#" class="formCouche" id="formCoucheCarroyage">
+        <label for="liste"> Select variable : </label>
+        <select name="listeCarroyage" id="listeCarroyage">
+          <option value="basedep" style="font-weight: bold">-- Grid --</option>
+          <option value="car_fld_wrr">flood exposure awarenes</option>
+          <option value="car_trst_fr">trust in flood forecasts</option>
+          <option value="car_fld_wrn">worry about flooding</option>
+          <option value="car_wll_prp">well prepared for flood</option>
+          <option value="car_prdct_d">floods difficult to predict</option>
+          <option value="car_cntrl_d">floods difficult to prevent</option>
+          <option value="car_mr_xpsd">more exposed to flooding</option>
+          <option value="car_evctn_b">evacuation abide</option>
+          <option value="car_fld_gt">go outside to get car</option>
+          <option value="car_evc_spn">evacuation spontaneous</option>
+          <option value="car_evctn_r">evacuation refuse</option>
+        </select>
+      </form>
+    </div>
+
+    <!-- Grille Bouton&Maps -->
+    <div class="grille_map">
+      <section class="muni">
+        <button
+          class="bouton"
+          name="Communes"
+          type="radio"
+          value="Communes"
+          onclick="afficherListeCommune(); afficherboxplotCommune ()"
+        >
+          Municipalities
+        </button>
+      </section>
+      <section class="iris">
+        <button
+          class="bouton"
+          name="Iris"
+          type="radio"
+          value="Iris"
+          onclick="afficherListeIris();afficherboxplotIris()"
+        >
+          Census tracts
+        </button>
+      </section>
+      <section class="grid">
+        <button
+          class="bouton"
+          name="Carroyage"
+          type="radio"
+          value="Carroyage"
+          onclick="afficherListeCarroyage(); afficherboxplotGrid()"
+        >
+          Grid
+        </button>
+      </section>
+      <section class="legend">
+        <img src="./perception_files/legende_horizontale.svg" width="200" />
+        source : survey "Paris-IDF 2018"
+      </section>
+      
+    </div>
+
+    <!-- Affichage graphique svg bouton sans mise en forme -->
+
+    <div>
+      <div class="data" id="svgmuni">
+        <strong
+          >Representation of values at the municipal level for all the
+          variables</strong
+        >
+        <br /><br />
+        <iframe
+          height="300px"
+          width="1000px"
+          src="./perception_files/SVGMuniEN.svg"
+        ></iframe>
+      </div>
+      <div class="data" id="svgiris">
+        <strong
+          >Representation of values at the scale of the Iris for all the
+          variables
+        </strong>
+        <br /><br />
+        <iframe
+          height="300px"
+          width="1000px"
+          src="./perception_files/SVGIrisEN.svg"
+        ></iframe>
+      </div>
+      <div class="data" id="svggrid">
+        <strong
+          >Representation of values at grid scale for all variables
+        </strong>
+        <br /><br />
+        <iframe
+          height="300px"
+          width="1000px"
+          src="./perception_files/SVGGridEN.svg"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Affichage overlay legende carte -->
+
+    <div>
+      <hr />
+      <footer class="footer">
+        <p>
+          <img src="./perception_files/Logo-01.png" />
+          <br />
+          <br />
+          <br />
+
+          This page was created by Laure Cazeaux, Victor Santoni and Samuel
+          Rufat. <br />
+          We encourage you to explore the maps and re-use the results under a
+          Creative Commons CC-BY-NC-SA licence <br /><br /><br />
+        </p>
+      </footer>
+    </div>
+
+    <iframe
+      id="TJhdBpRn"
+      frameborder="0"
+      src="./perception_files/translateSandbox.html"
+      style="width: 0px; height: 0px; display: none"
+    ></iframe>
+  </body>
+</html>

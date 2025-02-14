@@ -1,0 +1,104 @@
+<html lang="fr" >
+<head>
+
+<title> perception</title>
+<meta charset="utf-8">
+<!-- Bootstrap JS & CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- Openlayers JS & CSS -->
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+<!-- Mise en forme CSS -->
+<link rel="stylesheet" href ="assets/style.css">
+<!-- Script JS -->
+<script src ="assets/style.js" defer></script>
+<script src ="assets/main.js" defer></script>
+
+
+
+</head>
+<body >
+   <header >
+       <p class="p2"> <strong>  Carte de la perception du risque inondation <br>et des évacuations à Paris et région Ile de France </strong> </p>
+    </header> 
+  
+
+  <!-- Div NavBar et Présentation -->     
+
+  <ul class="ulnav">
+    <li class="linav"><a  href="./Index.html">Carte</a></li>
+    <li class="linav"><a  href="assets/html/methodologie.html">Méthodologie</a></li>
+    <li class="linav"><a  href="assets/html/financeurs.html">Financeurs</a></li>
+    <li class="linav"><a  href="assets/html/donnes&auteurs.html">Données et auteurs</a></li>
+    <li style="float:right" class="linav"><a class="active" href="assets/html/home.html">EN</a></li>
+  </ul>
+  
+  <div class ="t1">
+    <p style ="font-weight: bold;"> Méthodologie </p>
+    <p > 
+      Ces cartes sont issues d’une enquête de 2018 sur un échantillon représentatif de la population francilienne stratifié à trois échelles (département, commune, zone inondable; méthode des quotas, 2976 personnes). <br>
+      Les découpages territoriaux sont ceux de l’INSEE de 2018 : <br><br> 
+      <strong> communes </strong>[https://www.insee.fr/fr/information/2028028]  <br> 
+      <strong> IRIS </strong> [https://www.insee.fr/fr/metadonnees/definition/c1523] <br>
+      <strong> carreau de 200m </strong> [https://www.insee.fr/fr/statistiques/6215138]. <br><br>
+      
+      Les estimations sont dérivées d'un modèle statistique utilisant la régression multiniveaux avec post-stratification (MRP) ainsi que les caractéristiques démographiques et géographiques de chaque territoire.<br> <br> 
+  
+  
+      Pour plus de détails sur l’enquête ou les méthodes, veuillez consulter l'article scientifique : Rufat, S., Howe, P. (2022). Small-area estimations from survey data for high-resolution maps of urban flood risk perception and evacuation behavior. Annals of the American Association of Geographers, XXX(XXX), <br>
+      DOI: XXX [lien quand disponible] <br><br>
+    </p>
+    <br>
+  <p class="p1">
+   <strong> Nom des variables </strong> <br><br>
+   <li> <strong>trust_forecast → </strong> confiance dans les prévisions d'inondations<br></li>
+   <li> <strong>predict_difficult → </strong>les inondations sont difficiles à prévoir<br></li>
+   <li> <strong>flood_worry → </strong> inquiétude concernant les inondations<br></li>
+   <li> <strong>flood_awareness → </strong>connaissance de l’exposition aux inondations<br></li>
+   <li> <strong> more_exposed → </strong>davantage exposés aux inondations<br></li>
+   <li> <strong>control_difficult → </strong> les inondations difficiles à prévenir<br></li>
+   <li> <strong>well_prepared → </strong> bien préparé pour les inondations<br></li>
+   <li> <strong>evacuation_abide → </strong>évacuation selon la consigne<br></li>
+   <li> <strong>get_car → </strong> sortir chercher la voiture pendant une inondation<br></li>
+   <li> <strong>evacuation_spontaneous → </strong> évacuation spontanée<br></li>
+   <li> <strong>evacuation_refuse → </strong> refus d’évacuer<br><br></li>
+  </p>
+    
+  <p class="p1">
+    <strong> Questions posées  </strong> <br><br>
+    <li> Est-ce qu’il est possible de se fier aux prévisions d'inondation ? <br>
+    <li> Dans votre quartier, les inondations sont-elles faciles, ou difficiles, à prévoir ? <br>
+    <li> Est-ce que les inondations vous inquiètent ? <br>
+    <li> Votre logement est-il en zone inondable ? <br>
+    <li> Votre logement est-il plus exposé aux inondations que le reste de la région parisienne ? <br>
+    <li> Dans votre quartier, les inondations sont-elles difficiles à prévenir et à maîtriser ? <br>
+    <li> En cas d'inondation, évaluez-vous que votre ménage est bien préparé ? <br>
+    <li> Si vous receviez une consigne officielle d’évacuation mais que vous ne voyez pas d’eau, est-ce que vous partiriez?<br>
+    <li> En cas d'inondation, est-ce que vous iriez chercher votre voiture ? <br>
+    <li> En cas d'inondation, l’eau n'est pas visible, et il n'y pas pas encore d’effets. Mais si dans votre rue 1 famille sur 3 est déjà partie (33%), est-ce que vous évacueriez spontanément, sans en avoir reçu la consigne ? <br>
+    <li> Répondants refusant d’évacuer, ce n’est pas une question directe, mais un indicateur synthétique des réponses où aucune question sur l'évacuation n'a reçu de réponse positive, quel que soit le scénario ou les circonstances. <br>
+  </p>
+  
+  
+  </div>
+<DIV>
+  <hr>
+<footer  class = "footer">
+   <p > 
+    <img src ="assets/images/Logo-01.png" > 
+      <br>   <br>   <br>  
+     
+        Page réalisée par Laure Cazeaux, Victor Santoni et Samuel Rufat<br>
+        Nous encourageons la réutilisation des données sous licence Creative Commons CC-BY-NC-SA <br><br><br>
+   </p>
+</footer>
+</DIV>
+
+
+</body>
+
+
+</html>
